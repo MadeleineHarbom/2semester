@@ -1,9 +1,6 @@
 package eksempel.test;
 
-import static org.junit.Assert.*;
 
-import org.junit.Before;
-import org.junit.Test;
 
 import eksempel.modelstudent.Student;
 import eksempel.modelstudent.Team;
@@ -65,5 +62,7 @@ public class ServiceTest {
         assertEquals("T2", t.getName());
         assertEquals("R2", t.getRoom());
     }
+
+
 
 }
