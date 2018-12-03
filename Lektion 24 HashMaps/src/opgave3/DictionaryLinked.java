@@ -37,7 +37,8 @@ public class DictionaryLinked implements Dictionary {
 
     @Override
     public boolean isEmpty() {
-        return size == 0; //possible?
+        //Virker denne?
+        return size == 0; //possible? 0 = false, 1 = true
     }
 
     @Override
@@ -51,6 +52,9 @@ public class DictionaryLinked implements Dictionary {
         newnode.value = value;
         n.next = newnode;
         return newnode;
+
+        // Lige nu tjekkes ikke hvis key allereden findes
+        // Hvis key allereden findes, skal den bare skrift value til den nye
     }
 
     @Override

@@ -50,6 +50,16 @@ public class DictionaryDemo {
         System.out.println("Size:" + dictionary.size());
         System.out.println(dictionary.toString());
 
+        //Skal også afproeve put paa en eksisterende key
+
+
+        //Insert of remove to LinkedList er ikke konstant, den bliver stoerre og stoerre.
+        //Worst case er den linjaer
+
+        //HashMaps er kosntant tid. Er der dog ikke nogen orden.
+
+        // ekstraopgaven skal ha en Array af ArrayLists
+
 	}
 	
 }

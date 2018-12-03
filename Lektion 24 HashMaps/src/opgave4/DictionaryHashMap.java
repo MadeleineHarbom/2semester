@@ -4,6 +4,7 @@ public class DictionaryHashMap implements Dictionary {
 
 	private java.util.Map<Object, Object>[] tabel; // et array af maps
 	private int N = 10;
+	//private int size???? Behoeves den?
 
 	/**
 	 * HashingMap constructor comment.
@@ -47,6 +48,9 @@ public class DictionaryHashMap implements Dictionary {
 	@Override
 	public Object put(Object key, Object value) {
 		int i = key.hashCode() % N;
+		//Tjeck hvis key allereden findes
+        //Hvis key allereden findes, skal gen gamle V retunerews
+        //ELLers retuneres nye V
 		Object o = tabel[i].put(key, value);
 		return o;
 	}
@@ -55,6 +59,7 @@ public class DictionaryHashMap implements Dictionary {
 	public Object remove(Object key) {
 		int i = key.hashCode() % N;
 		Object o = tabel[i].remove(key);
+		//Skal bare retunere V
 		return o;
 	}
 

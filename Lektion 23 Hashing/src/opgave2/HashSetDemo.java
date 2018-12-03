@@ -41,6 +41,7 @@ public class HashSetDemo {
         System.out.println("Contains Romeo: " + names.contains("Romeo"));
         names.remove("Romeo");
         System.out.println("Contains Romeo: " + names.contains("Romeo"));
+        System.out.println("Oh Romeo, oh Romeo, where art thou? DELETED BITCH!");
         System.out.println(names.remove("Romeo"));
         //Proev af remove Romeo igen
         // Skal give false, da der ikke er noget Romeo i listen mere
