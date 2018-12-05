@@ -125,6 +125,7 @@ public class BinaryTree<E> {
     }
 
     public String preorder() {
+	    //er dette vbirkelig preorder?
 	    return preoder(root);
     }
 
@@ -134,6 +135,16 @@ public class BinaryTree<E> {
         }
 	    else {
 	        return "";
+        }
+    }
+
+    public String postorder() {
+	    return postorder(root);
+    }
+
+    private String postorder(Node n) {
+	    if (n != null) {
+	        return n.data + "\n" + postorder(n.left) + postorder(n.right);
         }
     }
 
