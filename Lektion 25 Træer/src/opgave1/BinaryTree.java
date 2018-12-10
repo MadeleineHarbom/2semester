@@ -98,74 +98,12 @@ public class BinaryTree<E> {
 
 	// Private recursive helper method
 	private int size(Node n) {
-	    if (n != null) {
-            return 1 + size(n.right) + size(n.left);
-        }
+		if (n != null) {
+			return 1 + size(n.right) + size(n.left);
+		}
 		else {
-		    return 0;
-        }
-	}
-
-   public int height() {
-        return height(root);
-
-
-
-    }
-
-    private int height(Node n) {
-	    //lav mig smartere
-        if (n != null) {
-            return 1 + Math.max(height(n.right), height(n.left));
-        }
-        else {
-            return 0;
-        }
-
-    }
-
-    public String preorder() {
-		//root
-		//preorder on both children
-	    //er dette vbirkelig preorder?
-	    return preoder(root);
-    }
-
-    private String preoder(Node n) {
-	    if (n != null) {
-	        return n.data + "\n" + preoder(n.right) + preoder(n.left);
-        }
-	    else {
-	        return "";
-        }
-    }
-
-    public String postorder() {
-	    return postorder(root);
-    }
-
-    private String postorder(Node n) {
-	    if (n != null) {
-	        return "\n" + postorder(n.left) + postorder(n.right) +  n.data;
-        }
-        else {
-	    	return "";
+			return 0;
 		}
-    }
-
-    public String inorder() {
-		return inorder(root);
-
-	}
-
-	private String inorder(Node n) {
-		String s = "";
-		if (n.left != null) {
-			s+= n.data;
-		}
-		return s;
-
-
 	}
 
 	private class Node {

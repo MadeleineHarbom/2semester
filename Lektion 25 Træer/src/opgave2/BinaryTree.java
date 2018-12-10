@@ -1,4 +1,4 @@
-package opgave3;
+package opgave2;
 
 /**
  * A binary tree in which each node has two children.
@@ -167,28 +167,6 @@ public class BinaryTree<E> {
         }
 
 	}
-
-	public int sum() {
-	    return sum(root);
-    }
-
-    private int sum(Node n) {
-	    if (n != null) {
-	        if(n.data instanceof Integer) {
-	            return (Integer) n.data + sum(n.right) + sum(n.left);
-            }
-            else {
-	            return 0;
-            }
-        }
-        else {
-	        return 0;
-        }
-    }
-
-    public double average() {
-	    return (double) sum() / size();
-    }
 
 	private class Node {
 		public E data;

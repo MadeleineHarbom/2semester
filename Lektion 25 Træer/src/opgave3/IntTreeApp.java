@@ -1,6 +1,5 @@
 package opgave3;
 
-
 public class IntTreeApp {
     public static void main(String[] args) {
 
@@ -23,33 +22,26 @@ public class IntTreeApp {
         System.out.println("Height: " + bt45.height());
 
         //trivserse metoder er rekursive
-
+        System.out.println("Preorder");
         System.out.println(bt45.preorder());
+        System.out.println("Works");
 
         System.out.println("------");
-
+        System.out.println("Postorder");
         System.out.println(bt45.postorder());
+        System.out.println("Works");
 
 
         System.out.println("-------");
 
-
+        System.out.println("Inorder");
         System.out.println(bt45.inorder());
+        System.out.println("Works");
 
-        System.out.println(bt45.sum());
 
-        //preorder
-        //roden kommer foerst
+        System.out.println("Sum: " + bt45.sum());
 
-        //postorder
-        //riden sidst
-
-        //Inorder
-        //tallene skal staa i voksende rakkefoelge
-        //Kun hvis trea stukturens standarder foelges
-
-        //Man maa gerne kaste integer i sum metoden og antage at den virker
-
+        System.out.println("Averae: " + bt45.average());
 
     }
 }
