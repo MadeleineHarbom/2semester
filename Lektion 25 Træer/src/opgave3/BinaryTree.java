@@ -1,4 +1,4 @@
-package opgave1;
+package opgave3;
 
 /**
  * A binary tree in which each node has two children.
@@ -146,7 +146,7 @@ public class BinaryTree<E> {
 
     private String postorder(Node n) {
 	    if (n != null) {
-	        return "\n" + postorder(n.left) + postorder(n.right) +  n.data;
+	        return n.data + "\n" + postorder(n.left) + postorder(n.right);
         }
         else {
 	    	return "";
@@ -160,12 +160,21 @@ public class BinaryTree<E> {
 
 	private String inorder(Node n) {
 		String s = "";
-		if (n.left != null) {
-			s+= n.data;
-		}
 		return s;
 
+	}
 
+	public int sum() {
+		return sum(root);
+	}
+
+	private int sum(Node n) {
+		if (n != null) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
 	}
 
 	private class Node {
@@ -173,4 +182,5 @@ public class BinaryTree<E> {
 		public Node left;
 		public Node right;
 	}
+
 }

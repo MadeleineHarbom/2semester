@@ -1,4 +1,5 @@
-package opgave1;
+package opgave3;
+
 
 public class IntTreeApp {
     public static void main(String[] args) {
@@ -34,6 +35,8 @@ public class IntTreeApp {
 
 
         System.out.println(bt45.inorder());
+
+        System.out.println(bt45.sum());
 
         //preorder
         //roden kommer foerst
