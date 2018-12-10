@@ -26,20 +26,54 @@ public class App {
         System.out.println("Stoerste: " + weihnachtsSucheBaum.findMax());
         System.out.println("Minste: " +weihnachtsSucheBaum.findMin());
         weihnachtsSucheBaum.print();
+        System.out.println("Remobve 30");
         weihnachtsSucheBaum.remove(30);
         weihnachtsSucheBaum.print();
+        System.out.println("Remove 88");
         weihnachtsSucheBaum.remove(88);
         weihnachtsSucheBaum.print();
+        System.out.println("Remove 45");
         weihnachtsSucheBaum.remove(45);
         weihnachtsSucheBaum.print();
-        weihnachtsSucheBaum.removeMin();
+        System.out.println("Remove 80");
+        weihnachtsSucheBaum.remove(80);
         weihnachtsSucheBaum.print();
-        weihnachtsSucheBaum.removeMin();
-        weihnachtsSucheBaum.print();
+
+
+        System.out.println("Find min");
         System.out.println(weihnachtsSucheBaum.findMin());
+        System.out.println("Remove 90");
         weihnachtsSucheBaum.remove(90);
         weihnachtsSucheBaum.print();
+        System.out.println("Find max");
         System.out.println(weihnachtsSucheBaum.findMax());
+
+        System.out.println("-----NEW TREE-----");
+        BinarySearchTree<Integer> weihnachtsSucheBaum1 = new BinarySearchTree<>();
+        weihnachtsSucheBaum1.add(45);
+        weihnachtsSucheBaum1.add(22);
+        weihnachtsSucheBaum1.add(77);
+        weihnachtsSucheBaum1.add(11);
+        weihnachtsSucheBaum1.add(30);
+        weihnachtsSucheBaum1.add(90);
+        weihnachtsSucheBaum1.add(15);
+        weihnachtsSucheBaum1.add(25);
+        weihnachtsSucheBaum1.add(88);
+
+        weihnachtsSucheBaum1.print();
+        System.out.println("Remove min " + weihnachtsSucheBaum1.removeMin());
+        //weihnachtsSucheBaum1.removeMin();
+        weihnachtsSucheBaum1.print();
+
+        System.out.println("Remove min " +  weihnachtsSucheBaum1.removeMin());
+        //weihnachtsSucheBaum1.removeMin();
+        weihnachtsSucheBaum1.print();
+        System.out.println("Remove min " +  weihnachtsSucheBaum1.removeMin());
+        //weihnachtsSucheBaum1.removeMin();
+        weihnachtsSucheBaum1.print();
+
+
+        System.out.println("-----");
 
 
     }

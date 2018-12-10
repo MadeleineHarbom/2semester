@@ -201,28 +201,44 @@ public class BinarySearchTree<E extends Comparable<E>> {
         }
         return null; //Skal helst aldrig ske :P
     }
-
+    /**
+     * Removes the lowest value object
+     * Not winning any beauty pagaents
+     */
     public E removeMin() {
         if (root != null) {
             if (root.left != null) {
-                return removeMin(root);
-            }
+                Node previous = root;
+                Node n =  root.left;
+                //Find the edge og the branch
+                while (n.left != null) {
+                    previous = n;
+					n = n.left;
+					}
+				//Removes the leaf
+                E temp = n.data;
+                if (n.right != null) {
+                    previous.left = n.right;
+                }
+                else {
+                    previous.left = null;
+                }
+                return temp;
+				}
             else {
                 E temp = root.data;
-                return root.data;
+                root = root.right;
+                return temp;
             }
-
-        }
+            }
         else{
             return null;
         }
+
+
+
     }
 
-    private E removeMin(Node n) {
-	    E min = findMin();
-	    remove(min); // ma jeg ikke :'(
-	    return min;
-    }
 
 	public String preorder() {
 
