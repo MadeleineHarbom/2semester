@@ -3,14 +3,29 @@ package opgave3;
 public class DictionaryBST<K extends Comparable<K>, V> implements Dictionary<K, V> {
 	//I AM NOT DONE!
 	private Node root;
+	private int size;
 
 	public DictionaryBST() {
 		root = null;
+		this.size = 0;
 	}
 
 	@Override
 	public V get(K key) {
-		// TODO
+	    //MINE! CHECK WITH PHONE
+	    Node current = root;
+	    while(current != null) {
+	        int comparison = current.key.compareTo(key);
+	        if (comparison == 0) {
+	            return current.value;
+            }
+            else if (comparison > 0) {
+	            current = current.left;
+            }
+            else{
+	            current = current.right;
+            }
+        }
 		return null;
 	}
 
@@ -37,14 +52,69 @@ public class DictionaryBST<K extends Comparable<K>, V> implements Dictionary<K, 
 
 	@Override
 	public boolean isEmpty() {
-		// TODO
-		return false;
+		return this.root == null;
 	}
 
 	@Override
 	public V put(K key, V value) {
-		// TODO
-		return null;
+	    //CHECK ME
+
+        //sets a new root, if tree is empty
+	    if (isEmpty()) {
+	        Node n = new Node(key, value);
+	        this.root = n;
+            this.size ++;
+	        return value;
+        }
+
+	    //checks if the key is already in the tree
+        if (find(key) != null) {
+            //change the value
+            Node current = root;
+            while (current != null) {
+                int d = current.key.compareTo(key);
+                if (d == 0) {
+                    current.value = value;
+                    return current.value;
+                } else if (d > 0) {
+                    current = current.left;
+                } else {
+                    current = current.right;
+                }
+            }
+
+        }
+        //Add a new Node
+        else {
+            Node n = new Node(key, value);
+            Node current = root;
+            Node previous = null;
+            //Will happen atleast once
+            while (current != null) {
+                int comparison = current.key.compareTo(key);
+                previous = current;
+                if (comparison > 0) {
+                    current = current.right;
+                }
+                else {
+                    current = current.left;
+                }
+
+            }
+            // adds the new node
+            if (previous.key.compareTo(key) > 0) {
+                previous.right = n;
+                this.size ++;
+                return n.value;
+            }
+            else {
+                previous.left = n;
+                this.size ++;
+                return n.value;
+            }
+
+        }
+        return null;
 	}
 
 	@Override
@@ -108,14 +178,28 @@ public class DictionaryBST<K extends Comparable<K>, V> implements Dictionary<K, 
 					smallestParent.left = smallest.right;
 				}
 			}
+			this.size --;
 		}
 		return toReturn;
 	}
+    public String inorder() {
+        return inorder(root);
+
+    }
+
+    private String inorder(Node n) {
+        if (n != null) {
+            return inorder(n.left) + "\n" + n.value  + inorder(n.right);
+        }
+        else {
+            return "";
+        }
+
+    }
 
 	@Override
 	public int size() {
-		// TODO
-		return -1;
+		return this.size;
 	}
 
 	private class Node {
