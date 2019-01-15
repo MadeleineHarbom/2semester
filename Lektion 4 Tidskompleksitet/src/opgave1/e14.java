@@ -11,7 +11,7 @@ public class e14 {
         }
     }
 
-    public static int privateMethod1(int[] array, int first, int last) {
+    private static int privateMethod1(int[] array, int first, int last) {
         int min = array[first];
         int indexOfMin = first;
         for (int index = first +1; index <= last; index++) {
@@ -28,7 +28,7 @@ public class e14 {
         System.out.println("Den koerer n*(n^2 -2n), er den saa faktoriel");
         System.out.println("Men da dette kun inkluderer den dominante del af ligningen");
         System.out.println("Saa den borde kunne forkortes til n^2, og blive kvadratisk?");
-        System.out.println("SPOERG PETER NAAR HAN ER PAA GODT HUMOER");
+        System.out.println("SPOERG PETER NAAR HAN ER PAA GODT HUMOER"); //Hey
     }
 
 

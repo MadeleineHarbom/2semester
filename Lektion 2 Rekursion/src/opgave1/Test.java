@@ -1,4 +1,4 @@
-package Labyrinth;
+package opgave1;
 
 public class Test {
 

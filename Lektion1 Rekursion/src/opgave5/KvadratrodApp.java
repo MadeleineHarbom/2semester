@@ -15,7 +15,7 @@ public class KvadratrodApp {
         }
     }
 
-    public static int kvadratrod(int n, int i) {
+    private static int kvadratrod(int n, int i) {
         if (i <= 0) {
             return 0;
         }

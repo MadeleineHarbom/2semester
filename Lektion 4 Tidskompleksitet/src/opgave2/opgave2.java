@@ -13,7 +13,8 @@ public class opgave2 {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hvilken stoerrelsesorden er metoden?");
+        System.out.println(method1(5));
+        System.out.println("Hvilken stoerrelsesorden er metoden?"); //tjek
         System.out.println("Linear logarithmisk");
     }
 

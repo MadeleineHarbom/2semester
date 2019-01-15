@@ -26,22 +26,22 @@ public class Skole {
     public double gennemsnit() {
         double k = 0.0;
         int i = 0;
-        //for (Studerende s : this.studerende) {
-          //  for (int ik : s.getKarakter()) {
-            //    k += ik;
-              //  i++;
-           // }
-       // }
+        for (Studerende s : this.studerende.values()) {
+           for (int ik : s.getKarakter()) {
+               k += ik;
+              i++;
+           }
+        }
         return k/i;
 
     }
 
     public Studerende findStuderende(int studienummer) {
-        //for (Studerende s : this.studerende) {
-          //  if (studienummer == s.getStudieNr()) {
-            //    return s;
-            //}
-        //}
+        for (int snr : this.studerende.keySet()) {
+            if (studienummer == snr) {
+                return snr; //Hvordan retunerer jeg value?
+            }
+        }
         return null;
     }
 

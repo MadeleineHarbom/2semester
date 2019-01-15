@@ -2,14 +2,16 @@ package opgave3TreeSet;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Skole {
     private String navn;
-    private List<Studerende> studerende;
+    private Set<Studerende> studerende;
 
     public Skole(String navn) {
         this.navn = navn;
-        this.studerende = new LinkedList();
+        this.studerende = new TreeSet<>();
     }
 
     public String getNavn() {

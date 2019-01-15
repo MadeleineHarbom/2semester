@@ -2,14 +2,16 @@ package opgave3TreeMap;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-public class Skole {
+public class Skole { //Ikke faering
     private String navn;
-    private List<Studerende> studerende;
+    private Map<Integer, Studerende> studerende;
 
     public Skole(String navn) {
         this.navn = navn;
-        this.studerende = new LinkedList();
+        this.studerende = new TreeMap();
     }
 
     public String getNavn() {
@@ -17,7 +19,7 @@ public class Skole {
     }
 
     public void addStuderende(Studerende s) {
-        this.studerende.add(s);
+        this.studerende.put(s.getStudieNr(), s);
     }
 
     public void removeStuderende(Studerende s) {

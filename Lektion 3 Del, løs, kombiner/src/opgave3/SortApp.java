@@ -9,7 +9,7 @@ public class SortApp {
 
 
 
-    public static void mergeSort(int[] list) {
+    public static void mergeSort(int[] list) { //Hvorfor er alt static?
         if (list.length <= 1) {
             return;
         }
@@ -55,7 +55,7 @@ public class SortApp {
         }
     }
 
-    public static void quickSort(int[] list, int from, int to) {
+    public static void quickSort(int[] list, int from, int to) { //Kig paa mig
         if (from >= to) {
             return;
         }
@@ -66,8 +66,8 @@ public class SortApp {
 
     private static int partition(int[] list, int from, int to) {
         int pivot = list[from];
-        int i = from -1;
-        int j = to + 1;
+        int i = from +1;
+        int j = to -1;
         while (i < j) {
             i++;
             while (list[i] < pivot) {

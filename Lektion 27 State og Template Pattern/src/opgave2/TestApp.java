@@ -24,5 +24,14 @@ public class TestApp {
         System.out.println(searcharray.search("Douglas"));
         System.out.println(searcharray.search("Stine"));
 
+        System.out.println("-----");
+        SearchableArray<String> searcharraybin = new SearchableArray<>(testarray);
+        System.out.println(searcharraybin.search("Douglas"));
+        System.out.println(searcharraybin.search("Stine"));
+        System.out.println(searcharraybin.search("Ann"));
+        System.out.println(searcharraybin.search("Nikko"));
+        System.out.println(searcharraybin.search("Patrick"));
+        System.out.println(searcharraybin.search("Gabe"));
+
     }
 }

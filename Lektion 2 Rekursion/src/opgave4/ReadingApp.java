@@ -39,8 +39,8 @@ public class ReadingApp {
 
     public static void main(String[] args) {
         scanDir("..");
-        System.out.println(countDir(".."));
-        countDir("..");
+        //System.out.println(countDir(".."));
+        //countDir("..");
 
     }
 }

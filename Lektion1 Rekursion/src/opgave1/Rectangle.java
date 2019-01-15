@@ -9,6 +9,7 @@ public class Rectangle {
         this.h = height;
     }
 
+    //Find arealet paa reklangel rekusivt
     public int getArea() {
         int height = this.h;
         int width = this.w;

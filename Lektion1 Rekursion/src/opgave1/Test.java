@@ -5,12 +5,14 @@ import java.util.Arrays;
 
 public class Test {
 
+    //find det stoerste element i array
     public static int highestArray(int[] theArray) {
         if (theArray.length == 0) {
             return 0;
         }
         else {
             int next = highestArray(Arrays.copyOfRange(theArray, 1, theArray.length));
+            //next er det hoejeste tal i den nye array, hvor foerste tal er fjernet
             if (theArray[0] > next) {
                 return theArray[0];
             }
