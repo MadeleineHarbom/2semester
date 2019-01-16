@@ -5,6 +5,12 @@ package eksempel.test;
 import eksempel.modelstudent.Student;
 import eksempel.modelstudent.Team;
 import eksempel.service.Service;
+import org.junit.Before;
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertNotNull;
+import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class ServiceTest {
     Service service;
