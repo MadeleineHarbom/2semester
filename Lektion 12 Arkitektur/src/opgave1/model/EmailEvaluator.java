@@ -9,7 +9,7 @@ public class EmailEvaluator implements Evaluator {
 		}
 		//Make better
 		int i = 0;
-		Character c = s.charAt(0); //ellers faar jeg et maaske ikke initialiseret error
+		Character c; //= s.charAt(0); //ellers faar jeg et maaske ikke initialiseret error
 		boolean part1 = false;
 		boolean part2 = false;
 		boolean part3 = false;

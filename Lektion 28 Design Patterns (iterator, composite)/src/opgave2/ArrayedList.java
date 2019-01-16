@@ -174,6 +174,10 @@ public class ArrayedList<T> implements Iterable<T>// TODO: implements Iterable<T
         return copy;
     }
 
+    public Iterator<T> iterator() {
+        return new hasiterator(this.items);
+    }
+
     @Override
     public String toString() {
         if (this.isEmpty())
@@ -191,9 +195,26 @@ public class ArrayedList<T> implements Iterable<T>// TODO: implements Iterable<T
     //-------------------------------------------------------------------------
     // TODO opgave 2
 
+    private class hasiterator implements Iterator<T> {
 
-    @Override
-    public Iterator<T> iterator() {
-        return null;
+        private T[] items;
+        private int currentIndex = 0;
+
+        public hasiterator(T[] items){
+            this.items = items;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex < items.length-1 && items[currentIndex] != null;
+        }
+
+        @Override
+        public T next() {
+            T item = items[currentIndex];
+            currentIndex++;
+            return item;
+        }
     }
+
 }

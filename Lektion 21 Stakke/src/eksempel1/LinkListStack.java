@@ -1,6 +1,9 @@
 package eksempel1;
 
+import opgave1.Stack;
+
 import java.util.LinkedList;
+
 
 public class LinkListStack<T> implements Stack<T> {
 
@@ -27,6 +30,11 @@ public class LinkListStack<T> implements Stack<T> {
 	@Override
 	public T peek() {
 		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String toStirng() {
 		return null;
 	}
 

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class Door {
 	private final DoorState closedState;
+	private final DoorState openState;
 	// TODO: Add more states
 	
 	private DoorState state;
@@ -18,6 +19,7 @@ public class Door {
 
 	public Door() {
 		closedState = new DoorClosed(this);
+		openState = new DoorOpen(this);
 		// TODO: initialize more states
 		observers = new ArrayList<Observer>();
 		state = this.closedState;
@@ -58,6 +60,10 @@ public class Door {
 		for (Observer obs : observers) {
 			obs.update(this);
 		}
+	}
+
+	public DoorState getClosing() {
+		return this.closedState;
 	}
 
 }

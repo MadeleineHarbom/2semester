@@ -7,7 +7,7 @@ public class SearchableList <E extends Comparable<E>> extends SearchPattern<E> {
     private List<E> list;
     private int current;
 
-    //skal kunne lave en linjaer soegning
+
 
     public SearchableList(List<E> list) {
         this.list = list;
@@ -28,7 +28,7 @@ public class SearchableList <E extends Comparable<E>> extends SearchPattern<E> {
         return list.get(current);
     }
 
-    //Hvad skal denne gøre?
+
     public void split(E m) {
         this.current ++;
     }
